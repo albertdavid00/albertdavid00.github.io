@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title> Astronomie </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Introducere in Astronomie. Planete. Galaxii">
+		<meta name="keywords" content="Astronomie, Spatiu cosmic, Univers">
+		<meta name="author" content="David Albert-Constantin">
+		<link rel="shortcut icon" type="image/x-len" href = "astronomy-for-beginners.jpg">
+		<style>
+			figure {
+				display: inline-block;
+				margin: 20px;
+			}
+			figure img {
+				vertical-align: top;
+			}
+			figure figcaption {
+				border: 1px dotted blue;
+				text-align: center;
+			}
+			/* ----------------- meniu ---------------*/
+			nav{
+				width:100%;
+				height:60px;
+				border: 1px solid red;	
+				background-color: #404040;
+			}
+			ul.menu {
+				float:left;
+				width:100%;
+				height:100%;
+			}
+			ul.menu li{
+				float: left;
+				list-style:none;
+				position: relative;
+				text-align: center;
+				width:19%;
+				border-right: 1px solid white;
+				transition: background 2s linear;	
+			}
+			ul.menu>li:first-child{
+				border-left: 1px solid white;
+			}
+			ul.menu li a{
+				display: block;
+				text-decoration: none;
+				font-family: arial;
+				font-weight: bold;
+				font-size: 17px;
+				color: white;
+				padding: 12px 10px;
+			}
+			li.active{
+				background-color:#900;
+			}
+			ul.menu li:hover:not(.active){
+				background-color: #111;
+			}
+			ul.submenu {
+				display: none;
+				width: 100%;
+				position: absolute;
+				background-color: #404040;
+				padding: 0px;
+				border-radius: 0px 0px 4px 4px;
+			}
+			ul.menu li:hover ul.submenu{
+				display: block;
+			}
+			ul.submenu li{
+				width: 100%;
+				border: 1px solid white;
+				border-radius: 4px;	
+			}
+			ul.submenu li a{
+				padding: 8px 14px;
+			}
+			ul.submenu li a:hover{
+				background-color: #111;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 id= "Home" > Spațiul cosmic </h1>
+		<nav class="wrapper">
+			<ul class="menu">
+				<li class= "active"><a  href = "#index"> Acasa </a>
+					<ul class= "submenu">
+						<li><a href = "#Introducere"> Introducere in astronomie </a></li>
+						<li><a href = "#Teorii"> Teorii din antichitate </a> </li>
+						<li><a href = "#BigBang"> Big Bang </a> </li>
+					</ul>
+				</li>
+				<li><a href = "Corpuri.html" target = "_top"> Corpuri cerești </a>
+					<ul class= "submenu">
+						<li><a href = "Corpuri.html#Planete"> Planete </a></li>
+						<li><a href = "Corpuri.html#Stele"> Stele </a></li>
+						<li><a href = "Corpuri.html#Galaxii"> Galaxii </a></li>
+					</ul>
+				</li>
+				<li><a href = "Fenomene.html#Fenomene"> Fenomene astronomice </a></li>
+				<li><a href = "Expeditii.html#Expeditii"> Expeditii in spatiu </a></li>
+				<li><a href = "Q&A.html#QA"> Intrebari & Raspunsuri </a></li>
+			</ul>
+		</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id = "Introducere"> Introducere in astronomie </h2>
+				<p> <b> Astronomia </b> este stiinta ce studiaza corpurile si evenimentele ceresti, constelatiile si universul in totalitatea sa. Astronomia profesionista se imparte in doua ramuri: observationala si teoretica.
+					Astronomia observationala se bazeaza pe colectarea datelor prin observarea corpurilor celeste, date care sunt analizate ulterior folosind principii de baza ale fizicii. In schimb,
+					astronomia teoretica se orienteaza asupra dezvoltarii modelelor analitice pentru explicarea fenomenelor.
+				</p>
+				<figure>
+					<img title= "Telescopul Hubble" src="TelescopHubble.jpg" alt="Telescop" height="120" width="200">
+					<figcaption> Telescopul Hubble </figcaption>
+				</figure>
+			</section>
+			<section>
+				<h2 id = "Teorii"> Teorii din antichitate </h2>
+				<p>
+					Spatiul cosmic a ridicat semne de intrebare oamenilor inca din cele mai vechi timpuri. In trecut, se credea ca <i> Pamantul </i> este centrul Universului, un punct fix, in jurul caruia 
+					se deplaseaza pe orbite circulare soarele, luna, planetele si stelele. Aceasta teorie a lui Aristotel a fost ulterior elaborata de Ptolemeu printr-un model cosmologic in care <i>Pamantul</i>
+					se afla in centru, inconjurat de 7 sfere.
+				</p>
+				<figure>
+						<img title= "Model Ptolemeu" src="PtolemeuModel.png" alt="Modelul lui Ptolemeu" height="120" width="200">
+						<figcaption> Model cosmologic </figcaption>
+					</figure>
+			</section>
+			<section>
+				<h2 id = "BigBang"> Big Bang </h2>
+				<p> Teoria Big Bang sustine ca <i> Universul </i> s-a extins de la o singularitate infinit de densa si infinit de fierbinte, cu circa 13,7 miliarde de ani in urma, la ceea ce este astazi.
+					Astronomul Edwin Hubble a descris Universul, pe baza anumitor observatii, ca fiind in continua expansiune. Mai mult, viteza de expansiune a 
+					Universului este mai mare decat viteza luminii, cea din urma reprezentand viteza maxima cu care se poate deplasa un corp indiferent de mediul in care se propaga.
+					Un indiciu major care sustine teoria Big Bang il reprezinta <strong> radiatia cosmica de fond</strong>. Aceasta este o forma de radiatie electromagnetica a carei
+					prezenta constanta se gaseste peste tot in Univers si nu are ca sursa o stea sau alt obiect ceresc.</p>
+				<figure>
+						<img title= "Cosmic Microwave Background" src="CMB.jfif" alt="CMB" height="150" width="220">
+						<figcaption> Radiatia cosmica de fond </figcaption>
+					</figure>
+			</section>
+			
+		</main>
+		<footer>
+			<p> <a href= "#"> Pagina de inceput </a></p>
+			<p> <small> © Copyright protected </small> </p>
+		</footer>
+	</body>
+</html>
