@@ -7,6 +7,7 @@
 		<meta name="keywords" content="Eclipsa, Perseide, SuperLuna">
 		<meta name="author" content="David Albert-Constantin">
 		<link rel="shortcut icon" type="image/x-len" href = "astronomy-for-beginners.jpg">
+		<link rel="stylesheet" type="text/css" href="CommonStyle.css">
 		<style>
 			figure {
 				display: inline-block;
@@ -19,67 +20,7 @@
 			figure figcaption {
 				border: 1px dotted blue;
 				text-align: center;
-			}
-			/* ----------------- meniu ---------------*/
-			nav{
-				width:100%;
-				height:60px;
-				border: 1px solid red;	
-				background-color: #404040;
-			}
-			ul.menu {
-				float:left;
-				width:100%;
-				height:100%;
-			}
-			ul.menu li{
-				float: left;
-				list-style:none;
-				position: relative;
-				text-align: center;
-				width:19%;
-				border-right: 1px solid white;
-				transition: background 2s linear;	
-			}
-			ul.menu>li:first-child{
-				border-left: 1px solid white;
-			}
-			ul.menu li a{
-				display: block;
-				text-decoration: none;
-				font-family: arial;
-				font-weight: bold;
-				font-size: 17px;
-				color: white;
-				padding: 12px 10px;
-			}
-			li.active{
-				background-color:#900;
-			}
-			ul.menu li:hover:not(.active){
-				background-color: #111;
-			}
-			ul.submenu {
-				display: none;
-				width: 100%;
-				position: absolute;
-				background-color: #404040;
-				padding: 0px;
-				border-radius: 0px 0px 4px 4px;
-			}
-			ul.menu li:hover ul.submenu{
-				display: block;
-			}
-			ul.submenu li{
-				width: 100%;
-				border: 1px solid white;
-				border-radius: 4px;	
-			}
-			ul.submenu li a{
-				padding: 8px 14px;
-			}
-			ul.submenu li a:hover{
-				background-color: #111;
+				background-color: purple;
 			}
 		</style>
 	</head>
@@ -110,14 +51,14 @@
 			</nav>
 		</header>
 		<main>
-			<section>
+			<section class= "fundal">
 				<h2> Fenomene astronomice </h2>
-				<p> De-a lungul istoriei au avut loc nenumarate evenimente astronomice care au influentat intr-un fel sau altul omenirea. Cateva exemple de evenimente
+				<p>&nbsp;&nbsp;&nbsp;&nbsp; De-a lungul istoriei au avut loc nenumarate evenimente astronomice care au influentat intr-un fel sau altul omenirea. Cateva exemple de evenimente
 				astronomice pot fi: fazele lunii, eclipsele de soare si de luna, ploile de meteori, supernova etc.
 				<br>O parte din fenomenele astronomice din anul <strong> 2020 </strong> sunt:
 				</p>
 				<p>
-					<b> Echinocțiul de primăvară - </b> va avea loc pe 20 Martie si marcheaza inceputul primaverii astronomice in emisfera nordica. 
+					<b> Echinocțiul de primăvară - </b> are loc pe 20 Martie si marcheaza inceputul primaverii astronomice in emisfera nordica. 
 				</p>
 				<p>
 					<b> SuperLuna - </b> pe 7 mai, Luna va aparea mai mare si mai luminoasa pe cer. 
@@ -126,8 +67,10 @@
 					<b>Eclipsa inelară de Soare - </b> in Romania se va putea observa o eclipsa partiala de Soare pe data de 21 Iunie.
 				</p>
 				<figure>
-					<img title= "Solar Eclipse" src="Eclipsa.jpg" alt="Planets" height="190" width="300">
-					<figcaption> <i> Eclipsa partiala de Soare </i> </figcaption>
+					<div class="zoom">
+						<img title= "Solar Eclipse" src="images/Eclipsa.jpg" alt="Planets" height="190" width="300">
+						<figcaption> <i> Eclipsa partiala de Soare </i> </figcaption>
+					</div>
 				</figure>
 				<p>
 					<b> Solstitiul de vara - </b> va avea loc pe 22 iunie si marcheaza inceputul verii astronomice.
@@ -137,8 +80,10 @@
 					coada cometei <i> 109P/Swift-Tuttle </i>.
 				</p>
 				<figure>
-					<img title= "Stele cazatoare" src="Perseide.jpg" alt="meteor shower" height="190" width="300">
-					<figcaption> <i> Perseide </i> </figcaption>
+					<div class="zoom">
+						<img title= "Stele cazatoare" src="images/Perseide.jpg" alt="meteor shower" height="190" width="300">
+						<figcaption> <i> Perseide </i> </figcaption>
+					</div>
 				</figure>
 				<p>
 					<b> Conjunctia planetelor Jupiter si Saturn - </b> evenimentul va avea loc pe 21 Decembrie, acesta repetandu-se o data la 20 de ani. Pe cerul noptii,

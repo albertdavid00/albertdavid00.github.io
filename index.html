@@ -7,10 +7,11 @@
 		<meta name="keywords" content="Astronomie, Spatiu cosmic, Univers">
 		<meta name="author" content="David Albert-Constantin">
 		<link rel="shortcut icon" type="image/x-len" href = "astronomy-for-beginners.jpg">
+		<link rel="stylesheet" type="text/css" href="CommonStyle.css">
 		<style>
 			figure {
 				display: inline-block;
-				margin-left:40%;
+				margin-left:38%;
 			}
 			figure img {
 				vertical-align: top;
@@ -22,114 +23,11 @@
 				color: white;
 				font-weight: bold;
 			}
-			/* ----------------- meniu ---------------*/
-			header{
-				background-image: url("space-trivia-questions.jpg");
-				height: 500px;
-			}
-			body{
-				background-image:url("Fundal maybe.jpeg");
-			}
-			nav{
-				margin-top:400px;
-				width:100%;
-				height:60px;
-				border: 1px solid red;	
-				background-color: #404040;
-			}
-			ul.menu {
-				float:left;
-				width:100%;
-				height:100%;
-			}
-			ul.menu li{
-				float: left;
-				list-style:none;
-				position: relative;
-				text-align: center;
-				width:19%;
-				border-right: 1px solid white;
-				transition: background 1s linear;	
-			}
-			ul.menu>li:first-child{
-				border-left: 1px solid white;
-			}
-			ul.menu li a{
-				display: block;
-				text-decoration: none;
-				font-family: arial;
-				font-weight: bold;
-				font-size: 17px;
-				color: white;
-				padding: 12px 10px;
-			}
-			li.active{
-				background-color:#900;
-			}
-			ul.menu li:hover:not(.active){
-				background-color: #111;
-			}
-			ul.submenu {
-				display: none;
-				width: 100%;
-				position: absolute;
-				background-color: #404040;
-				padding: 0px;
-				border-radius: 0px 0px 4px 4px;
-			}
-			ul.menu li:hover ul.submenu{
-				display: block;
-			}
-			ul.submenu li{
-				width: 100%;
-				border: 1px solid white;
-				border-radius: 4px;	
-			}
-			ul.submenu li a{
-				padding: 8px 14px;
-			}
-			ul.submenu li a:hover{
-				background-color: #111;
-			}
-			.fundal{
-				background-color: rgba(128,128,128, .5);
-				color: white;
-				border-radius: 15px 15px 15px 15px;
-			}
-			.fundal:hover{
-				background-color: rgba(83, 51, 237, 0.5);
-				transition: background 1s linear;
-			}
-			footer{
-				background-color: rgba(128,128,128, .8);
-			}
-			p{
-				margin-left: 20px;
-				font-size: 18px;
-			}
-			h1{
-				color: white;
-				text-align: center;
-				font-size:50px;
-			}
-			h2{
-				text-align: center;
-				font-weight: bold;
-				text-decoration: underline;
-				font-size: 30px;
-				color:white;
-			}
-			footer, footer>p>a{
-				background-image: linear-gradient(to bottom, blue , black);
-				color: white;
-				font-size:18px;
-				border-radius: 15px 15px 15px 15px;
-			}
 		</style>
 	</head>
 	<body>
 		<header>
-			<h1 id= "Home" > Spațiul cosmic </h1>
+			<h1 id= "Home" >Spațiul cosmic </h1>
 		<nav class="wrapper">
 			<ul class="menu">
 				<li class= "active"><a  href = "#index"> Acasa </a>
@@ -155,38 +53,44 @@
 		<main>
 			<section class= "fundal">
 				<h2 id = "Introducere"> Introducere in astronomie </h2>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp<b> Astronomia </b> este stiinta ce studiaza corpurile si evenimentele ceresti, constelatiile si universul in totalitatea sa. Astronomia profesionista se imparte in doua ramuri: observationala si teoretica.
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;<b> Astronomia </b> este stiinta ce studiaza corpurile si evenimentele ceresti, constelatiile si universul in totalitatea sa. Astronomia profesionista se imparte in doua ramuri: observationala si teoretica.
 					Astronomia observationala se bazeaza pe colectarea datelor prin observarea corpurilor celeste, date care sunt analizate ulterior folosind principii de baza ale fizicii. In schimb,
 					astronomia teoretica se orienteaza asupra dezvoltarii modelelor analitice pentru explicarea fenomenelor.
 				</p>
 				<figure>
-					<img title= "Telescopul Hubble" src="TelescopHubble.jpg" alt="Telescop" height="200" width="300" class="center">
-					<figcaption> Telescopul Hubble </figcaption>
+					<div class= "zoom">	
+						<img title= "Telescopul Hubble" src="images/TelescopHubble.jpg" alt="Telescop" height="200" width="300" class="center">
+						<figcaption> Telescopul Hubble </figcaption>
+					</div>
 				</figure>
 			</section>
 			<section class= "fundal">
 				<h2 id = "Teorii"> Teorii din antichitate </h2>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp Spatiul cosmic a ridicat semne de intrebare oamenilor inca din cele mai vechi timpuri. In trecut, se credea ca <i> Pamantul </i> este centrul Universului, un punct fix, in jurul caruia 
+					&nbsp;&nbsp;&nbsp;&nbsp; Spatiul cosmic a ridicat semne de intrebare oamenilor inca din cele mai vechi timpuri. In trecut, se credea ca <i> Pamantul </i> este centrul Universului, un punct fix, in jurul caruia 
 					se deplaseaza pe orbite circulare soarele, luna, planetele si stelele. Aceasta teorie a lui Aristotel a fost ulterior elaborata de Ptolemeu printr-un model cosmologic in care <i>Pamantul</i>
 					se afla in centru, inconjurat de 7 sfere.
 				</p>
 				<figure>
-						<img title= "Model Ptolemeu" src="PtolemeuModel.png" alt="Modelul lui Ptolemeu" height="200" width="300">
+					<div class= "zoom">	
+						<img title= "Model Ptolemeu" src="images/PtolemeuModel.png" alt="Modelul lui Ptolemeu" height="200" width="300">
 						<figcaption> Model cosmologic </figcaption>
+					</div>
 					</figure>
 			</section>
 			<section class= "fundal">
 				<h2 id = "BigBang"> Big Bang </h2>
-				<p> &nbsp;&nbsp;&nbsp;&nbsp Teoria Big Bang sustine ca <i> Universul </i> s-a extins de la o singularitate infinit de densa si infinit de fierbinte, cu circa 13,7 miliarde de ani in urma, la ceea ce este astazi.
+				<p> &nbsp;&nbsp;&nbsp;&nbsp; Teoria Big Bang sustine ca <i> Universul </i> s-a extins de la o singularitate infinit de densa si infinit de fierbinte, cu circa 13,7 miliarde de ani in urma, la ceea ce este astazi.
 					Astronomul Edwin Hubble a descris Universul, pe baza anumitor observatii, ca fiind in continua expansiune. Mai mult, viteza de expansiune a 
 					Universului este mai mare decat viteza luminii, cea din urma reprezentand viteza maxima cu care se poate deplasa un corp indiferent de mediul in care se propaga.
 					Un indiciu major care sustine teoria Big Bang il reprezinta <strong> radiatia cosmica de fond</strong>. Aceasta este o forma de radiatie electromagnetica a carei
 					prezenta constanta se gaseste peste tot in Univers si nu are ca sursa o stea sau alt obiect ceresc.</p>
 				<figure>
-						<img title= "Cosmic Microwave Background" src="CMB.jfif" alt="CMB" height="200" width="300">
+					<div class= "zoom">	
+						<img title= "Cosmic Microwave Background" src="images/CMB.jfif" alt="CMB" height="200" width="300">
 						<figcaption> Radiatia cosmica de fond </figcaption>
-					</figure>
+					</div>
+				</figure>
 			</section>
 			
 		</main>

@@ -7,6 +7,7 @@
 		<meta name="keywords" content="Galaxii, Planete, Stele, Constelatie, Gaura neagra">
 		<meta name="author" content="David Albert-Constantin">
 		<link rel="shortcut icon" type="image/x-len" href = "astronomy-for-beginners.jpg">
+		<link rel="stylesheet" type="text/css" href="CommonStyle.css"> 
 		<style>
 			th,td{
 				border:1px solid black;
@@ -19,79 +20,69 @@
 			table{
 				border-collapse:collapse;
 				empty-cells:show;
+				margin-left: 16.5%;
+				background-color:brown;
 			}
 			figure {
 				display: inline-block;
-				border: 1px dotted gray;
-				margin: 20px;
 			}
-			figure img {
+			.poze{
+				margin-left:35%;
+			}
+			.poze img {
 				vertical-align: top;
 			}
-			figure figcaption {
+			.poze figcaption {
 				border: 1px dotted blue;
 				text-align: center;
-			}
-			/* ----------------- meniu ---------------*/
-			nav{
-				width:100%;
-				height:60px;
-				border: 1px solid red;	
-				background-color: #404040;
-			}
-			ul.menu {
-				float:left;
-				width:100%;
-				height:100%;
-			}
-			ul.menu li{
-				float: left;
-				list-style:none;
-				position: relative;
-				text-align: center;
-				width:19%;
-				border-right: 1px solid white;
-				transition: background 2s linear;	
-			}
-			ul.menu>li:first-child{
-				border-left: 1px solid white;
-			}
-			ul.menu li a{
-				display: block;
-				text-decoration: none;
-				font-family: arial;
-				font-weight: bold;
-				font-size: 17px;
+				background-color: purple;
 				color: white;
-				padding: 12px 10px;
+				font-weight: bold;
 			}
-			li.active{
-				background-color:#900;
+			aside{
+				margin-top: 10px;
+				left: 30px;
 			}
-			ul.menu li:hover:not(.active){
-				background-color: #111;
+			#orion{
+				margin-left:30%;
 			}
-			ul.submenu {
-				display: none;
-				width: 100%;
-				position: absolute;
-				background-color: #404040;
-				padding: 0px;
-				border-radius: 0px 0px 4px 4px;
+			#grid{
+				display: grid;
+				grid-template-columns: auto auto auto auto;
 			}
-			ul.menu li:hover ul.submenu{
-				display: block;
+			#grid>figure{
+				box-shadow: gray 2px 2px;
 			}
-			ul.submenu li{
-				width: 100%;
-				border: 1px solid white;
-				border-radius: 4px;	
+			#grid img{
+				width:100%;
 			}
-			ul.submenu li a{
-				padding: 8px 14px;
+			#grid>figure:nth-child(1){
+				grid-area: 3/1/4/2;
 			}
-			ul.submenu li a:hover{
-				background-color: #111;
+			#grid>figure:nth-child(2){
+				grid-area: 2/1/3/2;
+			}
+			#grid>figure:nth-child(3){
+				grid-area: 1/1/2/2;
+			}
+			#grid>figure:nth-child(4){
+				grid-area: 1/2/2/3;
+			}
+			#grid>figure:nth-child(5){
+				grid-area: 1/3/2/4;
+			}
+			#grid>figure:nth-child(6){
+				grid-area: 1/4/2/5;
+			}
+			#grid>figure:nth-child(7){
+				grid-area: 2/4/3/5;
+			}
+			#grid>figure:nth-child(8){
+				grid-area: 3/4/4/5;
+			}
+			#grid>figure>div>figcaption{
+				text-align:center;
+				background-color: purple;
 			}
 		</style>
 	</head>
@@ -121,10 +112,10 @@
 			</nav>
 		</header>
 		<main>
-			<section>
+			<section class = "fundal">
 				<h2 id = "Planete" > Planete </h2>
 				<p>
-					<b>Planetele </b> sunt corpuri ceresti care orbiteaza in jurul unei stele si sunt indeajuns de masive pentru a fi rotunjite de propria gravitatie, dar nu sunt suficient
+					&nbsp;&nbsp;&nbsp;&nbsp;<b>Planetele </b> sunt corpuri ceresti care orbiteaza in jurul unei stele si sunt indeajuns de masive pentru a fi rotunjite de propria gravitatie, dar nu sunt suficient
 					de masive pentru a produce energie prin fuziune nucleara. Din acest motiv, ele sunt mai reci decat stelele si nu pot produce lumina proprie, insa pot reflecta lumina stelelor.
 					In sistemul nostru solar, putem identifica 8 planete. In ordinea distantei fata de Soare, acestea sunt:
 				</p>
@@ -138,26 +129,31 @@
 						<li>Uranus</li>
 						<li>Neptun</li>
 					</ol>
-				<p>Din cauza definitiei pe care a primit-o termenul de "planeta" in 2006, Pluto a fost retrogradata ca fiind o <i> planeta pitica.</i></p>
-				<figure>
-					<img title= "Solar System" src="Solar-system.jpg" alt="Planets" height="190" width="350">
-					<figcaption> Sistemul Solar </figcaption>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Din cauza definitiei pe care a primit-o termenul de "planeta" in 2006, Pluto a fost retrogradata ca fiind o <i> planeta pitica.</i></p>
+				<figure class= "poze">
+					<div class= "zoom">
+						<img title= "Solar System" src="images/Solar-system.jpg" alt="Planets" height="190" width="350">
+						<figcaption> Sistemul Solar </figcaption>
+					</div>
 				</figure>
 			</section>
-			<aside>
-				<b>Știați că:</b> Distanta de la Pamant la Luna este atat de mare incat restul planetelor din sistemul solar ar putea incapea intre cele doua, daca ar fi asezate una langa alta. Vezi <i> Figura 1. </i>  
-				<figure>
-					<img title= "Earth-Moon Distance" src="Earth-Moon.jpg" alt="Planets" height="190" width="350">
-					<figcaption> <i> Figura 1 </i> </figcaption>
+			<aside class= "fundal">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Știați că:</b> Distanta de la Pamant la Luna este atat de mare incat restul planetelor din sistemul solar ar putea incapea intre cele doua, daca ar fi asezate una langa alta. Vezi <i> Figura 1. </i>  
+				
+				<figure class="poze">
+					<div class= "zoom" >
+						<img title= "Earth-Moon Distance" src="images/Earth-Moon.jpg" alt="Planets" height="190" width="350">
+						<figcaption> <i> Figura 1 </i> </figcaption>
+					</div>
 				</figure>
 			</aside>
-			<section>
+			<section class= "fundal">
 				<h2 id = "Stele" > Stele </h2>
 				<p>
-					Stelele sunt corpuri masive si stralucitoare, sferice, alcatuite din <i> plasma </i>, care produc energie pe baza reactiilor de <i>fuziune atomica.</i> Pe cerul nocturn,
+					&nbsp;&nbsp;&nbsp;&nbsp;Stelele sunt corpuri masive si stralucitoare, sferice, alcatuite din <i> plasma </i>, care produc energie pe baza reactiilor de <i>fuziune atomica.</i> Pe cerul nocturn,
 					ochiul poate distinge pana la circa 6000 de stele, toate fiind din galaxia noastra. Cea mai cunoscuta stea este Soarele, stea de marime medie a carei varsta este de aproximativ
 					4,6 miliarde de ani. Masa Soarelui reprezinta 99,86% din masa intregului Sistem Solar, in timp ce 0,14% reprezinta masa celorlalte corpuri (planete, comete, asteroizi, meteoriti).
-					<br>În galaxia noastra, exista aproximativ 300 de miliarde de stele, din care unele se remarca prin anumite caracteristici:
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;În galaxia noastra, exista aproximativ 300 de miliarde de stele, din care unele se remarca prin anumite caracteristici:
 				</p>
 				<table>
 					<thead>
@@ -195,24 +191,72 @@
 						</tr>
 					</tbody>
 				</table>
-				<figure>
-					<img title= "Orion Constellation" src="Orion.jpg" alt="Constelatie" height="300" width="480">
-					<figcaption> Constelatia Orion </figcaption>
+				<figure id='orion' class="poze">
+					<div class= "zoom">
+						<img title= "Orion Constellation" src="images/Orion.jpg" alt="Constelatie" height="300" width="480">
+						<figcaption> Constelatia Orion </figcaption>
+					</div>
 				</figure>
 			</section>
-			<section>
+			<section class = "fundal">
 				<h2 id = "Galaxii"> Galaxii </h2>
 				<p>
-					Galaxiile sunt sisteme cu masa, unite de forte gravitationale si alcatuite din aglomeratii de stele, gaz interstelar, materie intunecata si energie intunecata.
+					&nbsp;&nbsp;&nbsp;&nbsp;Galaxiile sunt sisteme cu masa, unite de forte gravitationale si alcatuite din aglomeratii de stele, gaz interstelar, materie intunecata si energie intunecata.
 					Oamenii de stiinta considera ca in centrul fiecarei galaxii se gaseste cate o <i> gaura neagra supermasiva </i>.
 					<br>Galaxia in care se afla Sistemul Solar se numeste Calea Lactee (<i lang= 'en'> Milky Way </i>). Aceasta este o galaxie spiralata cu un diametru de aproximativ
 					150.000 de ani-lumina. O alta galaxie spiralata este Andromeda, care se afla la aproximativ 2.5 milioane de ani-lumina distanta si despre care se considera ca se va 
 					ciocni cu Calea Lactee in 4 miliarde de ani.
 				</p>
-				<figure>
-						<img title= "Cerul Noptii pe parcursul coliziunii" src="Andromeda-and-MilkyWay.jpg" alt="Galaxii" height="400" width="480">
-						<figcaption> Coliziunea dintre Andromeda si Calea Lactee </figcaption>
+				<div id = 'grid'>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part1.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza I </figcaption>
+						</div>
 					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part2.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza II </figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza III </figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part4.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza IV </figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part5.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza V </figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part6.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza VI </figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part7.jpg" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza VII</figcaption>
+						</div>
+					</figure>
+					<figure>
+						<div class='zoom'>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part8.png" alt="Galaxii" height="180" width="280">
+							<figcaption> Cerul noptii: Faza VIII </figcaption>
+						</div>
+					</figure>
+				</div>
 			</section>
 		</main>
 		<footer>
