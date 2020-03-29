@@ -6,7 +6,8 @@
 		<meta name="description" content="Corpurile ceresti: Galaxiile, Stelele, Planetele ">
 		<meta name="keywords" content="Galaxii, Planete, Stele, Constelatie, Gaura neagra">
 		<meta name="author" content="David Albert-Constantin">
-		<link rel="shortcut icon" type="image/x-len" href = "astronomy-for-beginners.jpg">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/x-len" href = "images/astronomy-for-beginners.jpg">
 		<link rel="stylesheet" type="text/css" href="CommonStyle.css"> 
 		<style>
 			th,td{
@@ -50,12 +51,6 @@
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 			}
-			#grid>figure{
-				box-shadow: gray 2px 2px;
-			}
-			#grid img{
-				width:100%;
-			}
 			#grid>figure:nth-child(1){
 				grid-area: 3/1/4/2;
 			}
@@ -84,31 +79,84 @@
 				text-align:center;
 				background-color: purple;
 			}
+			#grid .zoom>img{
+				width: 100%;
+				height: 100%;
+			}
+			#grid>#grid-galerie{
+				grid-area: 2/2/4/4;
+			}
+			.video{
+				margin-top: 1%;
+				text-align: center;
+			}
+			#container-animatie{
+				position:relative;
+				overflow:hidden;
+				border:1px solid black;
+				width:49%;
+				height:57%;
+				box-sizing:content-box;
+				margin: 15% auto auto 23%;
+				
+			}
+			#derulant{
+				display:flex;
+				flex-wrap:nowrap;
+				position: absolute;
+				animation-name:go;
+				animation-direction: alternate;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;
+				animation-duration:30s;
+			}
+			#derulant>*{
+				flex-shrink: 0;
+				position:relative;
+				margin:0px;
+			}
+			#container_animatie *{
+				height:100%;
+				widows: auto;
+			}
+			@keyframes go{
+				0%{
+					left:0px;
+				}
+				100%{
+					left:-700%;
+				}
+			}
+			#container-animatie figure figcaption{
+				text-align: center;
+				background-color: purple;
+				margin: 0px;
+			}
 		</style>
 	</head>
 	<body>
 		<header>
 			<h1 id= "Home" > Spațiul cosmic </h1>
 			<nav>
-			<ul class="menu">
-				<li><a href = "index.html"> Acasa </a>
-					<ul class="submenu">
-						<li><a href = "index.html#Introducere"> Introducere in astronomie </a></li>
-						<li><a href = "index.html#Teorii"> Teorii din antichitate </a> </li>
-						<li><a href = "index.html#BigBang"> Big Bang </a> </li>
-					</ul>
-				</li>
-				<li class= "active"><a href = "Corpuri.html" target = "_top"> Corpuri ceresti </a>
-					<ul class= "submenu">
-						<li><a href = "#Planete"> Planete </a></li>
-						<li><a href = "#Stele"> Stele </a></li>
-						<li><a href = "#Galaxii"> Galaxii </a></li>
-					</ul>
-				</li>
-				<li><a href = "Fenomene.html#Fenomene"> Fenomene astronomice </a></li>
-				<li><a href = "Expeditii.html#Expeditii"> Expeditii in spatiu </a></li>
-				<li><a href = "Q&A.html#QA"> Intrebari & Raspunsuri </a></li>
-			</ul>
+				<ul class="menu">
+					<li><a href = "index.html"> Acasa </a>
+						<ul class="submenu">
+							<li><a href = "index.html#Introducere"> Introducere in astronomie </a></li>
+							<li><a href = "index.html#Teorii"> Teorii din antichitate </a> </li>
+							<li><a href = "index.html#BigBang"> Big Bang </a> </li>
+						</ul>
+					</li>
+					<li class= "active"><a href = "Corpuri.html" target = "_top"> Corpuri ceresti </a>
+						<ul class= "submenu">
+							<li><a href = "#Planete"> Planete </a></li>
+							<li><a href = "#Stele"> Stele </a></li>
+							<li><a href = "#Galaxii"> Galaxii </a></li>
+						</ul>
+					</li>
+					<li><a href = "Fenomene.html#Fenomene"> Fenomene </a></li>
+					<li><a href = "Expeditii.html#Expeditii"> Expeditii </a></li>
+					<li><a href = "Q&A.html#QA"> Q & A </a></li>
+				</ul>
 			</nav>
 		</header>
 		<main>
@@ -119,7 +167,7 @@
 					de masive pentru a produce energie prin fuziune nucleara. Din acest motiv, ele sunt mai reci decat stelele si nu pot produce lumina proprie, insa pot reflecta lumina stelelor.
 					In sistemul nostru solar, putem identifica 8 planete. In ordinea distantei fata de Soare, acestea sunt:
 				</p>
-					<ol>
+					<ol id='listp'>
 						<li>Mercur</li>
 						<li>Venus</li>
 						<li>Terra</li>
@@ -132,7 +180,7 @@
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Din cauza definitiei pe care a primit-o termenul de "planeta" in 2006, Pluto a fost retrogradata ca fiind o <i> planeta pitica.</i></p>
 				<figure class= "poze">
 					<div class= "zoom">
-						<img title= "Solar System" src="images/Solar-system.jpg" alt="Planets" height="190" width="350">
+						<img title= "Solar System" src="images/Solar-system.jpg" alt="Planets"  height="190" width="350">
 						<figcaption> Sistemul Solar </figcaption>
 					</div>
 				</figure>
@@ -210,52 +258,98 @@
 				<div id = 'grid'>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part1.jpg" alt="Galaxii" height="180" width="280">
-							<figcaption> Cerul noptii: Faza I </figcaption>
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part1.jpg" alt="Galaxii">
+							<figcaption> Cerul noptii: Faza I (prezent) </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part2.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part2.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza II </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza III </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part4.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part4.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza IV </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part5.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part5.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza V </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part6.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part6.jpg" alt="Galaxii" >
 							<figcaption> Cerul noptii: Faza VI </figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part7.jpg" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part7.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza VII</figcaption>
 						</div>
 					</figure>
 					<figure>
 						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part8.png" alt="Galaxii" height="180" width="280">
+							<img title= "Cerul Noptii in timp" src="images/simulation/Part8.png" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza VIII </figcaption>
 						</div>
 					</figure>
+					<div id='grid-galerie'>
+						<div id= "container-animatie">
+							<div id ="derulant"> 
+								<figure>
+										<img title= "Cerul Noptii: in timp" src="images/simulation/Part1.jpg" alt="Galaxii" height="180px" width="280px">
+										<figcaption> Cerul noptii: Faza I (prezent) </figcaption>
+								</figure>
+								<figure>
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part2.jpg" alt="Galaxii" height="180px" width="280px">
+										<figcaption> Cerul noptii: Faza II </figcaption>
+								</figure>
+								<figure>								
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii" height="180" width="280">
+										<figcaption> Cerul noptii: Faza III </figcaption>							
+								</figure>
+								<figure>								
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part4.jpg" alt="Galaxii" height="180" width="280">
+										<figcaption> Cerul noptii: Faza IV </figcaption>								
+								</figure>
+								<figure>								
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part5.jpg" alt="Galaxii" height="180" width="280">
+										<figcaption> Cerul noptii: Faza V </figcaption>
+								</figure>
+								<figure>					
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part6.jpg" alt="Galaxii" height="180" width="280">
+										<figcaption> Cerul noptii: Faza VI </figcaption>								
+								</figure>
+								<figure>
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part7.jpg" alt="Galaxii" height="180" width="280">
+										<figcaption> Cerul noptii: Faza VII</figcaption>						
+								</figure>
+								<figure>								
+										<img title= "Cerul Noptii in timp" src="images/simulation/Part8.png" alt="Galaxii" height="180px" width="280px">
+										<figcaption> Cerul noptii: Faza VIII </figcaption>								
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class= "video">
+					<video width="40%" height="30%" controls>
+						<source src="GalaxiesCollision.mp4" type="video/mp4">
+						<source src="GalaxiesCollision.ogg" type="video/ogg">
+					  	Your browser does not support the video tag.
+					</video>
+					  <p>Simulare a impactului</p>  
 				</div>
 			</section>
 		</main>
