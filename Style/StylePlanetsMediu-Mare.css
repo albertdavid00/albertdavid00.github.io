@@ -1,0 +1,25 @@
+table{
+    font-size: 0.9rem;
+    float:none;
+    margin-left: 30%;
+}
+.orion{
+    margin-left: 25%;
+    width:50%;
+    height: auto;
+}
+#grid figcaption{
+    font-size:0.7rem;
+}
+#derulant figure img{
+    height: 98%;
+    width: 18vw;
+}
+@keyframes go{
+    0%{
+        left:0px;
+    }
+    100%{
+        left:-126vw;
+    }
+}

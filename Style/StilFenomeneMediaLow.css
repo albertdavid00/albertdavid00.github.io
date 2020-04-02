@@ -1,0 +1,20 @@
+.coloane{
+    column-count: 1;
+    margin-top: 60%;
+}
+#soare{
+    margin-top:0;
+    margin-left: 19%;
+}
+ul.menu li a{
+    font-size: 0.5rem;
+}
+ul.submenu{
+    z-index: 2;
+}
+figure{
+    width: 65%;
+}
+.nozoom>img{
+    height: auto;
+}

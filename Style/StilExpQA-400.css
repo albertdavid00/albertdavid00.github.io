@@ -1,0 +1,45 @@
+ul.menu li a{
+    font-size: 0.4rem;
+}
+figure {
+    position: relative;
+    display: inline-block;
+    margin-left:20%;
+    width:60%;
+}
+p {
+    font-size: 0.8rem;
+    padding-top: 10%;
+}
+h2{
+    font-size: 1.2rem;
+    padding-top: 10%;
+}
+.zoom>img{
+    height: 150px;
+}
+ul.menu li{
+    float: left;
+    list-style:none;
+    position: relative;
+    text-align: center;
+    width:19%;
+    border-right: none;
+    transition: background 1s linear;	
+}
+ul.menu>li:first-child{
+    border-left: none;
+}
+.fundal{
+    padding-bottom: 30%;
+}
+#adresa{
+    width:70%;
+    margin-top:50%;
+}
+.fundal{
+    padding-bottom: 10px;
+}
+.nimic{
+    padding-bottom: 100%;
+}

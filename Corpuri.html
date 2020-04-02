@@ -8,8 +8,11 @@
 		<meta name="author" content="David Albert-Constantin">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/x-len" href = "images/astronomy-for-beginners.jpg">
-		<link rel="stylesheet" type="text/css" href="CommonStyle.css"> 
-		<link rel="stylesheet" type="text/css" href="StylePlanets.css">
+		<link rel="stylesheet" type="text/css" href="Style/CommonStyle.css"> 
+		<link rel="stylesheet" type="text/css" href="Style/StylePlanets.css">
+		<link rel="stylesheet" type="text/css" href="Style/StylePlanetsMediu-Mare.css" media="screen and (min-width:701px) and (max-width:1025px)">
+		<link rel="stylesheet" type="text/css" href="Style/StylePlanetsMediu.css" media="screen and (min-width:400px) and (max-width:700px)">
+		<link rel="stylesheet" type="text/css" href="Style/StylePlanetsMic.css" media="screen and (max-width:400px)">
 	</head>
 	<body>
 		<header>
@@ -55,21 +58,17 @@
 						<li>Neptun</li>
 					</ol>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Din cauza definitiei pe care a primit-o termenul de "planeta" in 2006, Pluto a fost retrogradata ca fiind o <i> planeta pitica.</i></p>
-				<figure class= "poze">
-					<div class= "zoom">
-						<img title= "Solar System" src="images/Solar-system.jpg" alt="Planets"  height="190" width="350">
+				<figure class= "poze zoom">
+						<img title= "Solar System" src="images/Solar-system.jpg" alt="Planets">
 						<figcaption> Sistemul Solar </figcaption>
-					</div>
 				</figure>
 			</section>
 			<aside class= "fundal">
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Știați că:</b> Distanta de la Pamant la Luna este atat de mare incat restul planetelor din sistemul solar ar putea incapea intre cele doua, daca ar fi asezate una langa alta. Vezi <i> Figura 1. </i>  </p>
 				
-				<figure class="poze">
-					<div class= "zoom" >
-						<img title= "Earth-Moon Distance" src="images/Earth-Moon.jpg" alt="Planets" height="190" width="350">
+				<figure class="poze zoom">
+						<img title= "Earth-Moon Distance" src="images/Earth-Moon.jpg" alt="Planets">
 						<figcaption> <i> Figura 1 </i> </figcaption>
-					</div>
 				</figure>
 			</aside>
 			<section class= "fundal">
@@ -84,43 +83,41 @@
 					<thead>
 						<tr> 
 							<th> Stea </th>
-							<th id ='col2'> Caracteristica </th>
+							<th class="col2"> Caracteristica </th>
 							<th> Constelatie </th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td> Soare </td>
-							<td id ='col2'> Cea mai apropiata stea de Pamant (149.600.000 km) </td>
+							<td class="col2"> Cea mai apropiata stea de Pamant (149.600.000 km) </td>
 							<td> - (Parte din Sistemul Solar) </td>
 						</tr>
 						<tr> 
 							<td> Proxima Centauri </td>
-							<td id ='col2'> Cea mai apropiata stea de Sistemul Solar (4,23 ani-lumina) </td>
+							<td class="col2"> Cea mai apropiata stea de Sistemul Solar (4,23 ani-lumina) </td>
 							<td> Centaurul </td>
 						</tr>
 						<tr>
 							<td> Sirius A </td>
-							<td id ='col2'> Cea mai luminoasa stea de pe cerul nocturn </td>
+							<td class="col2"> Cea mai luminoasa stea de pe cerul nocturn </td>
 							<td> Câinele mare </td>
 						</tr>
 						<tr>
 							<td> Betelegeuse </td>
-							<td id ='col2'> Una dintre cele mai mari stele cunoscute, pe cale sa devina <i> supernova </i> </td>
+							<td class="col2"> Una dintre cele mai mari stele cunoscute, pe cale sa devina <i> supernova </i> </td>
 							<td> Orion </td>
 						</tr>
 						<tr> 
 							<td> UY Scuti </td>
-							<td id ='col2'> Supergiganta rosie, considerata ca fiind cea mai mare stea din Universul Observabil </td>
+							<td class="col2"> Supergiganta rosie, considerata ca fiind cea mai mare stea din Universul Observabil </td>
 							<td> Scutul </td>
 						</tr>
 					</tbody>
 				</table>
-				<figure class="orion">
-					<div class= "zoom">
+				<figure class="orion zoom">
 						<img title= "Orion Constellation" src="images/Orion.jpg" alt="Constelatie" height="300" width="480">
 						<figcaption> Constelatia Orion </figcaption>
-					</div>
 				</figure>
 			</section>
 			<section class = "fundal">
@@ -133,53 +130,37 @@
 					ciocni cu Calea Lactee in 4 miliarde de ani.
 				</p>
 				<div id = 'grid'>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part1.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza I (prezent) </figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part2.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza II </figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
-							<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii">
-							<figcaption> Cerul noptii: Faza III </figcaption>
-						</div>
+					<figure class="zoom">
+						<img title= "Cerul Noptii in timp" src="images/simulation/Part3.jpg" alt="Galaxii">
+						<figcaption> Cerul noptii: Faza III </figcaption>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part4.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza IV </figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part5.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza V </figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part6.jpg" alt="Galaxii" >
 							<figcaption> Cerul noptii: Faza VI </figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part7.jpg" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza VII</figcaption>
-						</div>
 					</figure>
-					<figure>
-						<div class='zoom'>
+					<figure class="zoom">
 							<img title= "Cerul Noptii in timp" src="images/simulation/Part8.png" alt="Galaxii">
 							<figcaption> Cerul noptii: Faza VIII </figcaption>
-						</div>
 					</figure>
 					<div id='grid-galerie'>
 						<div id= "container-animatie">
@@ -221,9 +202,9 @@
 					</div>
 				</div>
 				<div class= "video">
-					<video width="40%" height="30%" controls>
-						<source src="GalaxiesCollision.mp4" type="video/mp4">
-						<source src="GalaxiesCollision.ogg" type="video/ogg">
+					<video width="100" height="100" controls>
+						<source src="videos/GalaxiesCollision.mp4" type="video/mp4">
+						<source src="videos/GalaxiesCollision.ogg" type="video/ogg">
 					  	Your browser does not support the video tag.
 					</video>
 					  <p>Simulare a impactului</p>  

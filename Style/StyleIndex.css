@@ -1,0 +1,17 @@
+figure {
+    position: relative;
+    display: inline-block;
+    margin-left:30%;
+    width:40%;
+}
+figure img {
+    vertical-align: top;
+    width: 100%;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
