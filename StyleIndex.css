@@ -1,0 +1,55 @@
+figure {
+    position: relative;
+    display: inline-block;
+    margin-left:30%;
+    width:40%;
+}
+figure img {
+    vertical-align: top;
+    width: 100%;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+@media screen and (min-width:400px) and (max-width:700px){
+    ul.menu li a{
+        font-size: 0.7rem;
+    }
+    figure {
+        position: relative;
+        display: inline-block;
+        margin-left:20%;
+        width:60%;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:400px){
+    ul.menu li a{
+        font-size: 0.6rem;
+    }
+    figure {
+        position: relative;
+        display: inline-block;
+        margin-left:20%;
+        width:60%;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .zoom>img{
+        height: 150px;
+    }
+}

@@ -1,0 +1,361 @@
+.fundal{
+    padding-bottom: 6%;
+}
+aside p{
+    margin-top: 3%;
+}
+th,td{
+    border:1px solid black;
+    padding:2px;
+    text-align:center;
+}
+th{
+    background-color:darkslategray;
+}
+
+table{
+    border-collapse:collapse;
+    empty-cells:show;
+    margin-left: 10%;
+    background-color:darkmagenta;
+    width:40%;
+    float:left;
+    margin-top:1.5%;
+    font-size: 1rem;
+}
+tr:hover{
+    background-color: darkslategray;
+}
+figure {
+    display: inline-block;
+}
+aside{
+    margin-top: 10px;
+    left: 30px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+#grid>figure:nth-child(1){
+    grid-area: 3/1/4/2;
+}
+#grid>figure:nth-child(2){
+    grid-area: 2/1/3/2;
+}
+#grid>figure:nth-child(3){
+    grid-area: 1/1/2/2;
+}
+#grid>figure:nth-child(4){
+    grid-area: 1/2/2/3;
+}
+#grid>figure:nth-child(5){
+    grid-area: 1/3/2/4;
+}
+#grid>figure:nth-child(6){
+    grid-area: 1/4/2/5;
+}
+#grid>figure:nth-child(7){
+    grid-area: 2/4/3/5;
+}
+#grid>figure:nth-child(8){
+    grid-area: 3/4/4/5;
+}
+#grid>figure>div>figcaption{
+    text-align:center;
+    background-color: purple;
+}
+#grid .zoom>img{
+    width: 100%;
+    height: 100%;
+}
+#grid>#grid-galerie{
+    grid-area: 2/2/4/4;
+}
+.video{
+    margin-top: 1%;
+    text-align: center;
+}
+#container-animatie{
+    position:relative;
+    overflow:hidden;
+    border:1px solid black;
+    width:49%;
+    height:57%;
+    box-sizing:content-box;
+    margin: 15% auto auto 23%;
+    
+}
+#derulant{
+    display:flex;
+    flex-wrap:nowrap;
+    position: absolute;
+    animation-name:go;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-duration:30s;
+}
+#derulant>*{
+    flex-shrink: 0;
+    position:relative;
+    margin:0px;
+}
+#derulant figure img{
+    height: 98%;
+    width: 19vw;
+}
+#container_animatie *{
+    height:100%;
+    width:100%;
+    widows: auto;
+}
+#derulant{
+    height:89%;
+}
+@keyframes go{
+    0%{
+        left:0px;
+    }
+    100%{
+        left:-728%;
+    }
+}
+#container-animatie figure figcaption{
+    text-align: center;
+    background-color: purple;
+    margin: 0px;
+}
+.orion {
+    position: relative;
+    display: inline-block;
+    margin-left:10%;
+    width:30%;
+}
+.orion img {
+    vertical-align: top;
+    width: 100%;
+}
+.orion figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+.poze {
+    position: relative;
+    display: inline-block;
+    margin-left:30%;
+    width:40%;
+}
+.poze img {
+    vertical-align: top;
+    width: 100%;
+}
+.poze figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+@media screen and (min-width:701px) and (max-width:1025px){
+    table{
+        font-size: 0.9rem;
+        float:none;
+        margin-left: 30%;
+    }
+    .orion{
+        margin-left: 25%;
+        width:50%;
+    }
+    #grid figcaption{
+        font-size:0.8rem;
+    }
+    #derulant figure img{
+        height: 98%;
+        width: 18vw;
+    }
+    @keyframes go{
+        0%{
+            left:0px;
+        }
+        100%{
+            left:-126vw;
+        }
+    }
+
+}
+@media screen and (min-width:400px) and (max-width:700px){
+    table{
+        border-collapse:collapse;
+        empty-cells:show;
+        margin-left:20%; 
+        background-color:darkmagenta;
+        width:60%;
+        font-size: 0.8rem;
+    }
+    ul.menu li a{
+        font-size: 0.7rem;
+    }
+    figure {
+        position: relative;
+        display: inline-block;
+        margin-left:20%;
+        width:60%;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .poze {
+        position: relative;
+        display: inline-block;
+        margin-left:20%;
+        width:60%;
+    }
+    .orion {
+        position: relative;
+        display: inline-block;
+        margin-left:20%;
+        width:60%;
+    }
+    #grid figcaption{
+        font-size:0.5rem;
+    }
+    #grid-galerie{
+        display:none;
+    }
+    #grid{
+        display: grid;
+        grid-template-columns: auto auto auto;    
+    }
+    #grid>figure:nth-child(1){
+        grid-area: 1/1/3/3;
+        width:30%;
+        margin-left: 10%;
+    }
+    #grid>figure:nth-child(2){
+        grid-area: 1/2/3/4;
+        width:30%;
+        margin-left: 10%;
+    }
+    #grid>figure:nth-child(3){
+        grid-area: 1/3/2/4;
+    }
+    #grid>figure:nth-child(4){
+        grid-area: 2/1/3/2;
+    }
+    #grid>figure:nth-child(5){
+        grid-area: 2/2/3/3;
+    }
+    #grid>figure:nth-child(6){
+        grid-area: 2/3/3/4;
+    }
+    #grid>figure:nth-child(7){
+        grid-area: 3/1/4/2;
+    }
+    #grid>figure:nth-child(8){
+        grid-area: 3/3/4/4;
+    }
+    #grid .zoom>img{
+        width: 100%;
+        height: 100%;
+    }
+    .zoom{
+        transition: none;
+    }
+    .zoom:hover{
+        transform: none; 
+    
+    }
+}
+
+
+@media screen and (max-width:400px){
+    ul.menu li a{
+        font-size: 0.6rem;
+    }
+    .poze {
+        position: relative;
+        display: inline-block;
+        margin-left:0%;
+        width:100%;
+    }
+    figcaption{
+        font-size: 0.5rem;
+    }
+    table{
+        
+        font-size: 0.7rem;
+        width:80%;
+    }
+    .orion {
+        position: relative;
+        display: inline-block;
+        margin-left:0%;
+        width:100%;
+    }
+    p {
+        font-size: 0.6rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .zoom>img{
+        height: 150px;
+    }
+    #col2{
+        display:none;
+    }
+    .zoom{
+        transition: none;
+    }
+    .zoom:hover{
+        transform: none; 
+    }
+    #grid{
+        display: grid;
+        grid-template-columns: auto;    
+    }
+    #grid figcaption{
+        font-size:0.4rem;
+    }
+    #grid-galerie{
+        display:none;
+    }
+    #grid>figure:nth-child(1){
+        grid-area: 1/1/2/2;
+    }
+    #grid>figure:nth-child(2){
+        grid-area: 2/1/3/2;
+    }
+    #grid>figure:nth-child(3){
+        grid-area: 3/1/4/2;
+    }
+    #grid>figure:nth-child(4){
+        grid-area: 4/1/5/2;
+    }
+    #grid>figure:nth-child(5){
+        grid-area: 5/1/6/2;
+    }
+    #grid>figure:nth-child(6){
+        grid-area: 6/1/7/2;
+    }
+    #grid>figure:nth-child(7){
+        grid-area: 7/1/8/2;
+    }
+    #grid>figure:nth-child(8){
+        grid-area: 8/1/9/2;
+    }
+    #grid>figure>div>figcaption{
+        text-align:center;
+        background-color: purple;
+    }
+    .video{
+        display:none;
+    }
+}
