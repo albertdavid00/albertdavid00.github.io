@@ -15,3 +15,10 @@ figure figcaption {
     color: white;
     font-weight: bold;
 }
+@font-face {
+  font-family: "Kimberley";
+  src: url(http://www.princexml.com/fonts/larabie/kimberle.ttf) format("truetype");
+}
+h2{ 
+    font-family: "Kimberley", sans-serif;
+}

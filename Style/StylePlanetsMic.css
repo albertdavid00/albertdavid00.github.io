@@ -1,6 +1,9 @@
 ul.menu li a{
     font-size: 0.6rem;
 }
+#listp{
+    font-size: 0.6rem;
+}
 .poze {
     position: relative;
     display: inline-block;
