@@ -81,6 +81,7 @@ body{
 }
 .fundal{
 	background-color: rgba(128,128,128, .5);
+	transition: background .5s linear;
 	color: white;
 	border-radius: 15px 15px 15px 15px;
 	margin-left:10%;
