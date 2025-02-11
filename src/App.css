@@ -305,7 +305,7 @@ h1 {
     padding: 4px; /* Add some padding inside the border */
     margin-top: 20px;
     height: 18vh; /* Adjust the height on smaller screens */
-    z-index: 1;
+    z-index: 2;
   }
 
   .image-container {
@@ -374,7 +374,7 @@ h1 {
     justify-content: center; /* Align left hearts to the left */
     align-items: center;
     margin-left: 3px;
-    z-index: 2;
+    z-index: 1;
   }
   
   .hearts-right {
@@ -384,7 +384,7 @@ h1 {
     margin-right: 3px;
     justify-content: center;/* Align left hearts to the left */
     align-items: center;/* Align right hearts to the right */
-    z-index: 2;
+    z-index: 1;
   }
 
   .heart-group-container {
