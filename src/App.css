@@ -11,7 +11,7 @@
   background-color: pink;
   padding: 0px;
   text-align: center;
-  overflow: scroll;
+
 }
 
 h1 {
@@ -79,6 +79,7 @@ h1 {
   align-items: center;
   min-width: 100px; /* Fixed width for the video container, centered between hearts */
   width: 100%;
+  height: 45vh;
   background-color: white; /* Background color to highlight the video container */
   border: 8px solid #e74c3c; /* Red solid border */
   border-radius: 16px; /* Rounded corners */
@@ -135,7 +136,10 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-
+.pop-msg {
+  color:darkred;
+  font-weight: 500;
+}
 /* Popup Content */
 .popup-content {
   background: pink;
@@ -144,6 +148,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease-in-out;
+  color: 'darkred';
 }
 
 /* Close Button */
@@ -181,7 +186,7 @@ h1 {
 }
 .sad-popup {
   position: fixed;
-  bottom: 15px;
+  bottom: 50%;
   left: 50%;
   transform: translateX(-50%);
   background: #ffcccc;
@@ -210,6 +215,63 @@ h1 {
 
 .button-big:hover {
   transform: scale(1.8);  /* Scales the button to 120% of its size */
+}
+
+
+
+
+.raining-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* Prevents interaction with hearts */
+  overflow: hidden; /* Ensures hearts don't overflow */
+  z-index: 0; /* Keeps hearts in the background */
+}
+
+.heart {
+  position: absolute;
+  top: -50px; /* Start above the screen */
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* Special "I wanna be yours" text */
+.special-text {
+  font-size: 2vw;
+  font-family: "Pacifico", serif;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 0.5px rgb(146, 9, 112);
+  animation: fallRotate 4s ease-in forwards;
+}
+
+@keyframes fallRotate {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(96.5vh) rotate(360deg);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 450px) {
@@ -265,6 +327,23 @@ h1 {
   .header {
     font-size: 40px;
     font-family: "Pacifico", serif;
+  }
+
+  .video-container {
+    height: 20vh; /* Adjust the height on smaller screens */
+  }
+
+  .special-text {
+    font-size: 30px;
+    font-family: "Pacifico", serif;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 0.5px rgb(146, 9, 112);
+    animation: fallRotate 4s ease-in forwards;
   }
   
 }

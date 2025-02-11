@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import Hearts from './Hearts'
 import Confetti from "react-confetti";
-
+import RainingHearts from "./RainingHearts";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -38,12 +38,15 @@ function App() {
 
         <div className="btns-video-container">
 
-          <div className="video-container">
-            <video className="video"controls autoPlay muted>
-            <source src="iwannabeyours.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+        <div className="video-container">
+          <iframe
+            className="video"
+            src="https://www.youtube.com/embed/H7VLRAjN0Ys?autoplay=1&mute=1&loop=1&playlist=H7VLRAjN0Ys&modestbranding=1&showinfo=0&rel=0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
 
           <div className="btns-container">
               <button className='btn button-big' style={{backgroundColor: '#5cb85c'}}
@@ -72,7 +75,7 @@ function App() {
         <div className="popup">
           <div className="popup-content">
             <h2>💘 Happy Valentine's Day! 💘</h2>
-            <p> Can't wait to see you ❤️</p>
+            <p className="pop-msg"> Can't wait to see you ❤️</p>
             <button className="close-btn" onClick={() => setShowPopup(false)}>
               Close
             </button>
@@ -88,6 +91,11 @@ function App() {
           <p>💔 Try Again Pookie 😭</p>
         </div>
       )}
+
+
+      <div className="app">
+        <RainingHearts />
+      </div>
     </div>
   );
 }
