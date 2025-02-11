@@ -304,7 +304,7 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
     padding: 4px; /* Add some padding inside the border */
     margin-top: 32px;
-    height: 22.5vh; /* Adjust the height on smaller screens */
+    height: 22.2vh; /* Adjust the height on smaller screens */
     z-index: 2;
   }
 
