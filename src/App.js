@@ -1,8 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import './App.css';
 import Hearts from './Hearts'
 import Confetti from "react-confetti";
 import RainingHearts from "./RainingHearts";
+
+async function logVisit() {
+  try {
+
+    const proxyUrl = process.env.REACT_APP_PROXY_URL;
+    const targetUrl = process.env.REACT_APP_TARGET_URL;
+    const ipInfoToken = process.env.REACT_APP_IPINFO_TOKEN;
+    const response = await fetch("https://ipinfo.io/json?token=" + ipInfoToken)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      fetch(proxyUrl + targetUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ip: data.ip,
+          city: data.city,
+          region: data.region,
+          country: data.country,
+          timestamp: new Date().toISOString()
+        })
+      });
+    })
+    console.log("Visit logged successfully!");
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -15,6 +43,11 @@ function App() {
   const handleMouseLeave = () => {
     setIsShaking(false);
   };
+
+  useEffect(() => {
+    logVisit();
+  }, []);
+
   return (
     <div className="top-container">
       <h1>
@@ -93,7 +126,7 @@ function App() {
 
       {rejected && (
         <div className="sad-popup">
-          <p>💔 Try Again Pookie 😭</p>
+          <p>💔 Try Again, Pookie 😭</p>
         </div>
       )}
 
