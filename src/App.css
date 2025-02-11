@@ -1,0 +1,270 @@
+.top-container {
+  display: flex;
+  flex-direction: column; /* Stack header and hearts vertically */
+  justify-content: flex-start; /* Keep the header at the top */
+  align-items: center; /* Center content horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  padding: 0px;
+  text-align: center;
+  overflow: scroll;
+}
+
+h1 {
+  color: black;
+  -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 2px rgb(146, 9, 112);
+}
+.header {
+  font-size: 4vw;
+  font-family: "Pacifico", serif;
+}
+
+.hearts-container {
+  display: flex;
+  justify-content: space-evenly; /* Space out the left and right hearts */
+  align-items: center; /* Vertically center the hearts */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hearts-left {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* Align left hearts to the left */
+  align-items: center;
+}
+
+.hearts-right {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end; /* Align left hearts to the left */
+  align-items: center;/* Align right hearts to the right */
+}
+
+.image-container {
+  display: flex;
+  min-width: 80px; /* Fixed width for the image container */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 12vw;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: white; /* Background color to highlight the video container */
+  border: 8px solid #e74c3c; /* Red solid border */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
+  padding: 5px; /* Add some padding inside the border */
+}
+
+.image {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%;
+  object-fit: contain; /* Ensure the image fits within the container without distortion */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px; /* Fixed width for the video container, centered between hearts */
+  width: 100%;
+  background-color: white; /* Background color to highlight the video container */
+  border: 8px solid #e74c3c; /* Red solid border */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
+  padding: 5px; /* Add some padding inside the border */
+}
+.btns-video-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px; /* Fixed width for the video container, centered between hearts */
+  width: 40%;
+  margin-top: 160px;
+}
+.btns-container {
+  margin-top: 30px;
+}
+.btn {
+  width: 4vw;
+  min-width: 60px;
+  height: auto;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  border: 4px solid rgb(221, 57, 180);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  cursor:pointer;
+  text-align: center;
+  
+}
+
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container without distortion */
+}
+
+/* Popup Background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup Content */
+.popup-content {
+  background: pink;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+  margin-top: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+.sad-popup {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffcccc;
+  color: darkred;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeOut 4s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.button-big {
+  transition: transform 0.3s ease;  /* Smooth transition */
+}
+
+.button-big:hover {
+  transform: scale(1.8);  /* Scales the button to 120% of its size */
+}
+
+@media (max-width: 450px) {
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px; /* Fixed width for the video container, centered between hearts */
+    width: 100%;
+    background-color: white; /* Background color to highlight the video container */
+    border: 3px solid #e74c3c; /* Red solid border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
+    padding: 4px; /* Add some padding inside the border */
+    margin-top: 20px;
+  }
+
+  .btns-video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px; /* Fixed width for the video container, centered between hearts */
+    width: 40%;
+    margin-top: 20px;
+  }
+
+
+
+  .image-container {
+    display: flex;
+    min-width: 80px; /* Fixed width for the image container */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 12vw;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: white; /* Background color to highlight the video container */
+    border: 4px solid #e74c3c; /* Red solid border */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
+    padding: 5px; /* Add some padding inside the border */
+  }
+
+  h1 {
+    color: black;
+    -webkit-text-fill-color: red; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 1px rgb(146, 9, 112);
+    margin-bottom: 10px;
+    margin-top: 70px;
+  }
+  .header {
+    font-size: 40px;
+    font-family: "Pacifico", serif;
+  }
+  
+}
