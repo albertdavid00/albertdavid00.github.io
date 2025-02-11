@@ -13,7 +13,6 @@ async function logVisit() {
     const response = await fetch("https://ipinfo.io/json?token=" + ipInfoToken)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       fetch(proxyUrl + targetUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -77,7 +76,7 @@ function App() {
         <div className="video-container">
           <iframe
             className="video"
-            src="https://www.youtube.com/embed/H7VLRAjN0Ys?autoplay=1&mute=1&loop=1&playlist=H7VLRAjN0Ys&modestbranding=1&showinfo=0&rel=0&controls=1"
+            src="https://www.youtube.com/embed/6vPoNvjvfrg?autoplay=1&mute=1&loop=1&playlist=6vPoNvjvfrg&modestbranding=1&showinfo=0&rel=0&controls=1"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
