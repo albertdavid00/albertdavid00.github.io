@@ -274,7 +274,24 @@ h1 {
   }
 }
 
-@media (max-width: 450px) {
+
+
+@media (max-width: 640px) {
+  .hearts-container {
+    justify-content: space-between; /* Space out the left and right hearts */
+  }
+  
+  .btns-video-container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px; /* Fixed width for the video container, centered between hearts */
+    width: 80%;
+    left: 10%;
+    margin-top: 20px;
+  }
+
   .video-container {
     display: flex;
     justify-content: center;
@@ -287,18 +304,9 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for the border */
     padding: 4px; /* Add some padding inside the border */
     margin-top: 20px;
+    height: 18vh; /* Adjust the height on smaller screens */
+    z-index: 1;
   }
-
-  .btns-video-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100px; /* Fixed width for the video container, centered between hearts */
-    width: 40%;
-    margin-top: 20px;
-  }
-
-
 
   .image-container {
     display: flex;
@@ -306,7 +314,7 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 12vw;
+    width: 25vw;
     height: auto;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -325,16 +333,29 @@ h1 {
     margin-top: 70px;
   }
   .header {
-    font-size: 40px;
+    font-size: 29px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
     font-family: "Pacifico", serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
-  .video-container {
-    height: 20vh; /* Adjust the height on smaller screens */
+  @keyframes fallRotate {
+    0% {
+      transform: translateX(-50%) translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(90vh) rotate(360deg);
+      opacity: 1;
+    }
   }
 
   .special-text {
-    font-size: 30px;
+    font-size: 24px;
     font-family: "Pacifico", serif;
     position: absolute;
     top: -50px;
@@ -344,6 +365,33 @@ h1 {
     -webkit-text-fill-color: red; /* Will override color (regardless of order) */
     -webkit-text-stroke: 0.5px rgb(146, 9, 112);
     animation: fallRotate 4s ease-in forwards;
+  }
+
+  .hearts-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center; /* Align left hearts to the left */
+    align-items: center;
+    margin-left: 10px;
+    z-index: 2;
+  }
+  
+  .hearts-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 10px;
+    justify-content: center;/* Align left hearts to the left */
+    align-items: center;/* Align right hearts to the right */
+    z-index: 2;
+  }
+
+  .heart-group-container {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   
 }

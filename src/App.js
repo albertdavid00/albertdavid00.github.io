@@ -30,7 +30,10 @@ function App() {
           <div className="image-container">
             <img src="image5.jpeg" alt="Left Image" className="image" />
           </div>
-          <Hearts />
+          <div className="heart-group-container">
+            <Hearts />
+          </div>
+          
           <div className="image-container">
             <img src="image2.jpeg" alt="Left Image" className="image" />
           </div>
@@ -41,7 +44,7 @@ function App() {
         <div className="video-container">
           <iframe
             className="video"
-            src="https://www.youtube.com/embed/H7VLRAjN0Ys?autoplay=1&mute=1&loop=1&playlist=H7VLRAjN0Ys&modestbranding=1&showinfo=0&rel=0"
+            src="https://www.youtube.com/embed/H7VLRAjN0Ys?autoplay=1&mute=1&loop=1&playlist=H7VLRAjN0Ys&modestbranding=1&showinfo=0&rel=0&controls=1"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
@@ -63,7 +66,9 @@ function App() {
           <div className="image-container">
             <img src="image3.jpeg" alt="Left Image" className="image" />
           </div>
-          <Hearts />
+          <div className="heart-group-container">
+            <Hearts />
+          </div>
           <div className="image-container">
             <img src="image4.jpeg" alt="Left Image" className="image" />
           </div>
