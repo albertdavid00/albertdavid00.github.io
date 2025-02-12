@@ -25,7 +25,7 @@ async function logVisit() {
         })
       });
     })
-    console.log("Visit logged successfully!");
+    console.log("Visited successfully!");
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -76,7 +76,7 @@ function App() {
         <div className="video-container">
           <iframe
             className="video"
-            src="https://www.youtube.com/embed/6vPoNvjvfrg?autoplay=1&mute=1&loop=1&playlist=6vPoNvjvfrg&modestbranding=1&showinfo=0&rel=0&controls=1"
+            src="https://www.youtube.com/embed/73Mtb60vMx8?autoplay=1&mute=1&loop=1&playlist=73Mtb60vMx8&modestbranding=1&showinfo=0&rel=0&controls=1"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
@@ -84,9 +84,9 @@ function App() {
 
 
           <div className="btns-container">
-              <button className='btn button-big' style={{backgroundColor: '#5cb85c'}}
+              <button className='btn button-big' style={{backgroundColor: 'rgb(240, 142, 159)'}}
                 onClick={() => {setRejected(false); setShowPopup(true) }}> Yes</button>
-              <button className={`btn ${isShaking ? 'shake' : ''}`} style={{backgroundColor: '#e74c3c'}}
+              <button className={`btn ${isShaking ? 'shake' : ''}`} style={{backgroundColor: 'rgb(255, 0, 43)'}}
                 onClick={() => {setRejected(true); setTimeout(() => { setRejected(false)}, 4000)}}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -114,7 +114,7 @@ function App() {
             <h2>💘 Happy Valentine's Day! 💘</h2>
             <p className="pop-msg"> Can't wait to see you ❤️</p>
             <button className="close-btn" onClick={() => setShowPopup(false)}>
-              Close
+              <b>Close</b>
             </button>
           </div>
         </div>
